@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11-openj9:alpine-jre
+FROM bellsoft/liberica-openjre-alpine-musl:17
 WORKDIR /app
 EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-1.0.jar

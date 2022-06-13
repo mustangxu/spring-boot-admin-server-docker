@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.4</version>
+		<version>3.0.0-M3</version>
 	</parent>
 	<properties>
 		<java.version>11</java.version>
@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-server</artifactId>
-			<version>2.5.1</version>
+			<version>3.0.0-M2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,8 +39,8 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
+				<groupId>io.github.git-commit-id</groupId>
+				<artifactId>git-commit-id-maven-plugin</artifactId>
 				<configuration>
 					<useNativeGit>true</useNativeGit>
 					<failOnNoGitDirectory>false</failOnNoGitDirectory>
@@ -49,17 +49,31 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
-				<version>1.4.13</version>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.40.1</version>
 				<configuration>
-					<dockerfile>Dockerfile</dockerfile>
-					<repository>mustangxu/spring-boot-admin-server</repository>
-					<tag>${project.version}-${git.commit.id.abbrev}</tag>
+					<images>
+						<image>
+							<name>mustangxu/spring-boot-admin-server:${project.version}-${git.commit.id.abbrev}</name>
+						</image>
+					</images>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
