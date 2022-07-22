@@ -11,9 +11,8 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
 @EnableAdminServer
 @SpringBootApplication
 public class SpringBootAdminServerApplication {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
-        try (var ctx = SpringApplication
-            .run(SpringBootAdminServerApplication.class, args);) {
-        }
+        SpringApplication.run(SpringBootAdminServerApplication.class, args);
     }
 }
