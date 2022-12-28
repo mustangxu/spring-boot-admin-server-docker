@@ -1,3 +1,2 @@
 [![Codacy Security Scan](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/codacy.yml/badge.svg)](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/codacy.yml)
 [![CodeQL](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/codeql-analysis.yml)
-[![Docker](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/mustangxu/spring-boot-admin-server-docker/actions/workflows/docker-publish.yml)
