@@ -126,4 +126,5 @@
 			<url>https://maven.pkg.github.com/mustangxu/spring-boot-admin-server-docker</url>
 		</repository>
 	</distributionManagement>
+	<version>${admin.version}</version>
 </project>
