@@ -17,6 +17,12 @@
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-server</artifactId>
             <version>${admin.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
@@ -29,6 +35,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>mustangxu/spring-boot-admin-server:${project.version}-${git.commit.id.abbrev}</name>
+                        <env>
+                            <BP_JVM_VERSION>17</BP_JVM_VERSION>
+                            <GRAALVM_QUICK_BUILD>true</GRAALVM_QUICK_BUILD>
+                            <!--BP_LOG_LEVEL>DEBUG</BP_LOG_LEVEL-->
+                        </env>
+                    </image>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>io.github.git-commit-id</groupId>
@@ -48,7 +64,7 @@
                             <name>mustangxu/spring-boot-admin-server</name>
                             <build>
                                 <tags>
-                                    <tag>latest</tag>
+                                    <!--tag>latest</tag-->
                                     <tag>%v-${git.commit.id.abbrev}</tag>
                                 </tags>
                                 <from>bellsoft/liberica-runtime-container:jre-17-slim-musl</from>
