@@ -37,7 +37,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>mustangxu/spring-boot-admin-server:${project.version}-${git.commit.id.abbrev}</name>
+                        <name>mustangxu/spring-boot-admin-server-native:${project.version}-${git.commit.id.abbrev}</name>
                         <env>
                             <BP_JVM_VERSION>17</BP_JVM_VERSION>
                             <GRAALVM_QUICK_BUILD>true</GRAALVM_QUICK_BUILD>
