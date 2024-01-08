@@ -10,7 +10,7 @@
     </parent>
     <properties>
         <java.version>17</java.version>
-        <admin.version>3.2.0</admin.version>
+        <admin.version>3.2.1</admin.version>
     </properties>
     <dependencies>
         <dependency>
