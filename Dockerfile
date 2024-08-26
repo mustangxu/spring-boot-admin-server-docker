@@ -1,4 +1,4 @@
-FROM maven:3.9.6-eclipse-temurin-22-alpine AS build
+FROM maven:3.9.8-eclipse-temurin-22-alpine AS build
 WORKDIR /app
 COPY src src
 COPY pom.xml pom.xml
