@@ -4,7 +4,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN mvn -DskipTests clean package
 
-FROM bellsoft/liberica-runtime-container:jre-23-slim-musl
+FROM bellsoft/liberica-runtime-container:jre-24-slim-musl
 WORKDIR /app
 EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-3.4.5.jar
