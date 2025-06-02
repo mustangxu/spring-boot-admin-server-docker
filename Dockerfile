@@ -1,10 +1,10 @@
-FROM maven:3.9.8-eclipse-temurin-22-alpine AS build
+FROM maven:3.9-eclipse-temurin-23 AS build
 WORKDIR /app
 COPY src src
 COPY pom.xml pom.xml
 RUN mvn -DskipTests clean package
 
-FROM bellsoft/liberica-runtime-container:jre-24-slim-musl
+FROM eclipse-temurin:23-jre-ubi9-minimal
 WORKDIR /app
 EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-3.4.5.jar
