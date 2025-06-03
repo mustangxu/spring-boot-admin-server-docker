@@ -4,7 +4,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN mvn -DskipTests clean package
 
-FROM eclipse-temurin:23-jre-ubi9-minimal
+FROM eclipse-temurin:24-jre-ubi9-minimal
 WORKDIR /app
 EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-3.5.0.jar
