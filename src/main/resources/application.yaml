@@ -1,13 +1,13 @@
 server:
   port: 9000
-  
+  shutdown: immediate
+
 spring:
   boot:
     admin:
       client:
         url:
-        - http://127.0.0.1:9000
-
+          - http://127.0.0.1:9000
   application:
     name: Spring Boot Admin
 
@@ -16,7 +16,8 @@ management:
     health:
       show-details: always
   endpoints:
-    enabled-by-default: true
+    access:
+      default: unrestricted
     web:
       exposure:
         include: "*"
