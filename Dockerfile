@@ -10,4 +10,5 @@ EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-3.5.3.jar
 COPY --from=build /app/target/${JAR_FILE} app.jar
 ENTRYPOINT ["java","-XX:+UseZGC","-Xmx1G","--enable-preview",\
+    "--enable-native-access=ALL-UNNAMED",
     "-jar","/app/app.jar"]
