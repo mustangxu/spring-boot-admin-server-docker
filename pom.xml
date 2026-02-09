@@ -6,11 +6,11 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.7</version>
+        <version>4.0.2</version>
     </parent>
     <properties>
         <java.version>25</java.version>
-        <admin.version>3.5.7</admin.version>
+        <admin.version>4.0.0-M2</admin.version>
     </properties>
     <dependencies>
         <dependency>
