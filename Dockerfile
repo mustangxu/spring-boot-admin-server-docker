@@ -7,7 +7,7 @@ RUN mvn -DskipTests clean package
 FROM bellsoft/liberica-openjre-alpine:25
 WORKDIR /app
 EXPOSE 9000
-ARG JAR_FILE=spring-boot-admin-server-docker-4.0.0.jar
+ARG JAR_FILE=spring-boot-admin-server-docker-4.0.1.jar
 COPY --from=build /app/target/${JAR_FILE} app.jar
 ENTRYPOINT ["java","-XX:+UseZGC","-Xmx1G","--enable-preview",\
     "--enable-native-access=ALL-UNNAMED",\
