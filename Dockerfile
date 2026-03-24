@@ -4,7 +4,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN mvn -DskipTests clean package
 
-FROM bellsoft/liberica-openjre-alpine:25
+FROM bellsoft/liberica-openjre-alpine:26
 WORKDIR /app
 EXPOSE 9000
 ARG JAR_FILE=spring-boot-admin-server-docker-4.0.2.jar
