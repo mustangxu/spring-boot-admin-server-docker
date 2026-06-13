@@ -3,6 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jayxu</groupId>
     <artifactId>spring-boot-admin-server-docker</artifactId>
+    <version>${admin.version}</version>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -10,7 +11,7 @@
     </parent>
     <properties>
         <java.version>25</java.version>
-        <admin.version>4.0.4</admin.version>
+        <admin.version>4.1.0</admin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -90,5 +91,4 @@
             </plugin>
         </plugins>
     </build>
-    <version>${admin.version}</version>
 </project>
