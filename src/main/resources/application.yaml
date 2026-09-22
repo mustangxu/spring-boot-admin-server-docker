@@ -10,6 +10,9 @@ spring:
           - http://127.0.0.1:9000
   application:
     name: Spring Boot Admin
+  threads:
+    virtual:
+      enabled: true
 
 management:
   endpoint:
