@@ -1,5 +1,6 @@
 services:
   spring-boot-admin-server:
+    container_name: spring-boot-admin-server
     image: mustangxu/spring-boot-admin-server
     restart: unless-stopped
     ports:
