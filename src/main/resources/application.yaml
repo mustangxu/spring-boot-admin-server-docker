@@ -1,5 +1,5 @@
 server:
-  port: 9999
+  port: 9000
   shutdown: immediate
 
 spring:
@@ -7,7 +7,7 @@ spring:
     admin:
       client:
         url:
-          - http://127.0.0.1:9999
+          - http://127.0.0.1:9000
   application:
     name: Spring Boot Admin
 
