@@ -1,5 +1,6 @@
 FROM maven:3-eclipse-temurin-26 AS build
 WORKDIR /app
+COPY .git /home/app/.git
 COPY src src
 COPY pom.xml pom.xml
 RUN --mount=type=cache,target=/root/.m2/repository mvn -DskipTests clean package
