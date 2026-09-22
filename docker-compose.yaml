@@ -1,0 +1,12 @@
+services:
+  spring-boot-admin-server:
+    image: mustangxu/spring-boot-admin-server
+    restart: unless-stopped
+    ports:
+      - "9999:9999"
+    healthcheck:
+      test: [ "CMD", "wget", "-qO-", "http://localhost:9999/actuator/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s

@@ -1,0 +1,2 @@
+git pull
+docker buildx build -t mustangxu/spring-boot-admin-server .
