@@ -6,7 +6,7 @@ services:
     ports:
       - "9999:9000"
     healthcheck:
-      test: [ "CMD", "wget", "-qO-", "http://localhost:9999/actuator/health" ]
+      test: [ "CMD", "wget", "-qO-", "http://localhost:9000/actuator/health" ]
       interval: 10s
       timeout: 5s
       retries: 12
