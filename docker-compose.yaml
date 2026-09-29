@@ -3,6 +3,7 @@ services:
     container_name: spring-boot-admin-server
     image: mustangxu/spring-boot-admin-server
     restart: unless-stopped
+    pull_policy: always
     ports:
       - "9999:9000"
     healthcheck:
