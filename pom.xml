@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns = "http://maven.apache.org/POM/4.0.0" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jayxu</groupId>
     <artifactId>spring-boot-admin-server-docker</artifactId>
@@ -11,7 +11,7 @@
     </parent>
     <properties>
         <java.version>25</java.version>
-        <admin.version>4.1.2</admin.version>
+        <admin.version>4.1.3</admin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -32,7 +32,8 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>mustangxu/spring-boot-admin-server-native:${project.version}-${git.commit.id.abbrev}</name>
+                        <name>mustangxu/spring-boot-admin-server-native:${project.version}-${git.commit.id.abbrev}
+                        </name>
                         <env>
                             <BP_JVM_VERSION>17</BP_JVM_VERSION>
                             <GRAALVM_QUICK_BUILD>true</GRAALVM_QUICK_BUILD>
@@ -52,7 +53,7 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.49.0</version>
-                 <configuration>
+                <configuration>
                     <verbose>true</verbose>
                     <images>
                         <image>

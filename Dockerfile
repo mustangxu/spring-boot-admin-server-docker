@@ -5,7 +5,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN --mount=type=cache,target=/root/.m2/repository mvn -DskipTests clean package
 
-RUN cp target/spring-boot-admin-server-docker-4.1.2.jar ./app.jar && \
+RUN cp target/spring-boot-admin-server-docker-4.1.3.jar ./app.jar && \
     java -Djarmode=tools -jar app.jar extract --layers --destination extracted
 
 FROM bellsoft/liberica-openjre-alpine:27
