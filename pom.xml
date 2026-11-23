@@ -12,7 +12,7 @@
     <properties>
         <java.version>25</java.version>
         <admin.version>4.1.5</admin.version>
-        <logback.version>1.6.4</logback.version>
+        <logback.version>1.6.6</logback.version>
     </properties>
     <dependencies>
         <dependency>
